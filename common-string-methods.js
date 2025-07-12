@@ -6,18 +6,51 @@ Activity 1: Searching Strings
 Write a program to:
 Check if the text "JavaScript" is in the string "Learning JavaScript is fun!" using includes.
 Find the position of the word "fun" in the string.
+*/
 
+let javaScriptString = "Learning JavaScript is fun!";
+
+let javaScriptStringContains = javaScriptString.includes("JavaScript");
+let javaScriptStringFun = javaScriptString.indexOf("fun");
+
+console.log({javaScriptStringContains, javaScriptStringFun});
+  
+/*
 Activity 2: Transforming Strings
 Convert the string " CODE BOOTCAMP " to lowercase and remove all extra whitespace.
 Replace "BOOTCAMP" with "JavaScript" in the transformed string.
+*/
 
+let codeBootCampString = " CODE BOOTCAMP "
+let codeBootCampTransformed = codeBootCampString.toLowerCase().trim();
+let codeBootCampReplaced = codeBootCampTransformed.replace("BOOTCAMP", "JavaScript"); //Intentionally not working because we changed it to lowercase first?
+
+console.log({codeBootCampTransformed, codeBootCampReplaced});
+
+
+/*
 Activity 3: Breaking Apart a Sentence
 Split the sentence "Coding is fun and educational" into an array of words.
+*/
 
+let sentence = "Coding is fun and educational";
+let sentenceBroken = sentence.split(" ");
+
+console.log({sentence, sentenceBroken});
+
+/*
 Activity 4: Retrieving Substrings
 Retrieve the first character of "Bootcamp" using charAt.
 Extract the word "camp" from "Bootcamp" using slice.
+*/
 
+let bootCamp = "Bootcamp";
+let bootCampFirstLetter = bootCamp.charAt(0);
+let bootCampExtracted = bootCamp.slice(4);
+
+console.log({bootCampFirstLetter, bootCampExtracted});
+
+/*
 Advanced Challenge
 Write a program to process the following string:
 Customer: John Doe
@@ -26,8 +59,22 @@ Total: $20.50
 Extract the customer name.
 Split the order into an array of items.
 Convert the total price to uppercase (e.g., "TOTAL: $20.50").
+*/
+
+let orderString = `Customer: John Doe
+Order: Apple, Banana, Grape
+Total: $20.50`;
+
+let customerName = orderString.slice(10, 18);
+let orderItems = orderString.slice(26).split(/[,\n]/, 3);
+let totalPriceUppercase = orderString.slice(47).toUpperCase();
+
+console.log(orderString);
+
+console.log(customerName, orderItems, totalPriceUppercase);
 
 
+/*
 Practice Problem #2
 
 Objective
